@@ -1,0 +1,43 @@
+#marquee{
+    width: 100%;
+    margin: 30px 0;
+}
+#marquee h2{
+    text-align: center;
+    margin:30px 0 ;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgb(31 41 55);
+    line-height: 2rem;
+}
+#marquee .marq-div .mar-img img{
+object-fit: cover;
+width: 100%;
+height: 96px;
+}
+
+#marquee .marq-div .mar-img{
+    height: 96px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#marquee .marquee-wrp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*gap: 13vw;*/
+}
+
+#marquee .marq-div{
+    margin-left: 13vw;
+   /* width: 100%;*/
+   text-align: center;
+  
+}
+
+#marquee .marq-div p{
+margin: 10px 0;
+color: #374751;
+}

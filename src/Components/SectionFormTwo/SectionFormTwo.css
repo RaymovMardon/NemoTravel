@@ -1,0 +1,111 @@
+#form-two{
+    background-color: #F9FAFB;
+    width: 100%; 
+}
+#form-two h2{
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-align: center;
+}
+#form-two .ftitl{
+    
+    text-align: center;
+    color:#4b5563;
+    line-height: 1.75rem;
+}
+#form-two .form-two-wrp{
+    margin: 40px 30px;
+    display: grid;
+    gap:2rem;
+    grid-template-columns: 2fr 2fr;
+    justify-content: space-around;
+}
+
+#form-two .form-two-wrp .form-two-left, .form-two-right div{
+    
+        background-color: #FFFF;
+        
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+#form-two .form-two-wrp .form-two-left .form-input-two{
+display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;}
+
+    #form-two .form-input-two div{
+        width: 100%;
+    }
+    #form-two .form-two-right div h3{
+        font-weight: 600;  
+          font-size: 1.25rem;
+        line-height: 1.75rem;
+    margin-bottom:1rem ;
+    }
+    #form-two .form-two-right div p{
+
+    color:#4b5563;
+    line-height: 1.75rem;
+}
+#form-two .form-input-two label{
+    line-height: 1.75rem;
+    color:#4b5563;
+}
+#form-two .form-input-two button{
+    width: 100%;
+    background-color: #2c2c2c;
+    padding: 10px;
+    border-style: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+}
+#form-two .form-input-two button:hover{
+    background-color: #4e4e4e;
+}
+    #form-two .form-input-two input{
+        border-color: currentColor;
+        border-radius: 8px;
+        padding: 10px;
+        width: 100%;
+    }
+    #form-two .form-input-two textarea{
+        width: 100%;
+        border-color: currentColor;
+        border-radius: 8px;
+        padding: 10px;
+        
+    }
+    .form-two-right div iframe{
+        border-radius: 0.5rem;
+    }
+
+    #form-two .form-two-right{
+        display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    }
+
+    @media only screen and (max-width:850px) {
+        #form-two .form-two-wrp {
+            margin: 40px 5px;}
+        
+    }
+
+    @media only screen and (max-width:768px) {
+
+        #form-two .form-two-wrp{
+    margin: 40px 30px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 2fr;
+    }}
+
+    @media only screen and (max-width:500px) {
+        #form-two .form-two-wrp {
+            margin: 40px 5px;}
+    }

@@ -1,0 +1,74 @@
+header{
+    width: 100%;
+    background-color: rgb(242 101 34 / var(--tw-bg-opacity, 1));
+    position: fixed;
+    z-index: 100;
+}
+
+header .header-wrp img{
+    width: 120px;
+   height: 40px;
+}
+header .header-wrp {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-wrp ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.header-wrp ul li a{
+    font-size: 14px;
+    color: #FFFF;
+    font: medium;
+    font-weight: 550;
+}
+.header-wrp select{
+    background-color:transparent;
+    color: #FFFF;
+    border-style: none !important;
+    outline: none;
+    cursor: pointer;
+}
+
+.header-wrp option{
+    color: black;
+   
+}
+.header-wrp .bars{
+    display: none;
+}
+@media only screen and (max-width:880px) {
+    .header-wrp .head-nav{
+        display: none;
+    }
+    .header-wrp .bars{
+        display: block;
+    }
+    .header-wrp .si-bars {
+        color: white;
+        font-size: 21px;}
+        .header-wrp .head-view{
+            border-radius: 6px;
+            margin-top: 400px;
+            position: absolute;
+    background-color: white;
+    
+    width: 95%;
+        }
+        .header-wrp .head-view ul{
+            margin: 30px;
+            color: black;
+            flex-direction: column;
+        }
+        .header-wrp .head-view ul li a{
+            color: black !important;
+        }
+        .header-wrp .head-view ul li a:hover{
+            color: rgb(242 101 34);
+        }
+}

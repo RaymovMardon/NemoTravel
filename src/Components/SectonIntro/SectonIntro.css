@@ -1,0 +1,117 @@
+#intro{
+    width: 100%;
+    background-color:rgb(242 101 34 / var(--tw-bg-opacity, 1)) ;
+}
+#intro .intro-wrp{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+}
+#intro .intro-wrp h1{
+    padding-bottom: 24px;
+    text-align: center;
+    color: #ffff;
+    font-size: 60px;
+    font-weight: bold;
+}
+#intro .intro-wrp h5{
+    padding-bottom: 48px;
+    text-align: center;
+    color: #ffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#intro .intro-info-wrp{
+    align-items: center;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px 10px;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+#intro .intro-info-wrp .intro-info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.intro-info-wrp .intro-info .intro-img{
+    border-radius: 100px;
+    background-color: rgb(242 101 34 / var(--tw-bg-opacity, 1));
+}
+
+.intro-info-wrp .intro-info .intro-img i{
+    font-size: 30px;
+    padding: 5px;
+color: white;
+}
+.intro-info-wrp .intro-text p:nth-child(1){
+    line-height: 1.25rem;
+    color: #1F2937;
+}
+.intro-info-wrp .intro-text p:nth-child(2){
+    font-size: 18px;
+    line-height: 25px;
+    color: #1F2937;
+    font-weight: 700;
+}
+.intro-wrp .intro-info-wrp .btnn{
+    background-color: rgb(242 101 34 / var(--tw-bg-opacity, 1)) ;
+    padding: 12px 24px;
+    color: #ffff;
+    border-style: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.intro-wrp .intro-info-wrp .btnn:hover{
+    background-color: rgb(218, 94, 33);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width:970px) {
+    #intro .intro-info-wrp {
+        
+        width: 90%;}
+}
+
+@media only screen and (max-width:768px) {
+
+    #intro .intro-info-wrp {
+        
+        width: 99%;}
+        #intro .intro-info-wrp {
+            padding: 20px 10px;}
+}
+
+@media only screen and (max-width:700px) {
+    
+    #intro .intro-info-wrp {
+        flex-direction: column;
+    gap: 20px;}
+    #intro .intro-info-wrp {
+        width: 50%;
+    border-radius: 15px;}
+    #intro .intro-info-wrp div {
+        flex-direction: column;
+        text-align: center;
+    }
+    #intro .intro-wrp h1 {
+        
+        font-size: 2rem;}
+        #intro .intro-wrp h5 {
+            padding-bottom: 2rem;
+            font-size: 1.5rem;}
+}
+
+@media only screen and (max-width:500px) {
+    #intro .intro-info-wrp {
+        width: 70%;}
+        #intro .intro-wrp h1 {
+            font-size: 1.6rem;}
+            #intro .intro-wrp h5 {
+                padding-bottom: 2rem;
+                font-size: 1.2rem;}
+}

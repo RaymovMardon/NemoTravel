@@ -1,0 +1,104 @@
+#aboutus{
+    margin: 60px 0;
+    width: 100%;
+}
+
+#aboutus h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 24px;
+}
+#aboutus .a-title{
+    font-size: 20px;
+    color: #4B5563;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+#aboutus .cards{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: space-between;
+}
+#aboutus .card{
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
+
+#aboutus .card h2{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+#aboutus .card p{
+  line-height: 1.6rem;
+
+    color: #4B5563;
+    font-weight: 500;
+}
+
+#aboutus .a-info-wrp{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+#aboutus .a-info-wrp .info-left p{
+  line-height: 1.6rem;
+
+    color: #4B5563;
+    font-size: 17px;
+    line-height: 1.6rem;
+}
+#aboutus .a-info-wrp .info-right{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#aboutus .a-info-wrp .info-right .a-img-one{
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    width: 550px;
+    height: 256px;
+    border-radius: 10px;
+}
+#aboutus .a-info-wrp .info-right img{
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+#aboutus .a-info-wrp .info-right .a-img-two{
+    width: 267px;
+    height: 160px;
+    box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+@media only screen and (max-width:1120px) {
+    #aboutus .a-info-wrp .info-right .a-img-one {
+        width: 45vw;}
+        #aboutus .a-info-wrp .info-right .a-img-two{
+            width: 21vw;
+        }
+}
+
+@media only screen and (max-width:768px) {
+    #aboutus .cards {
+    flex-direction: column;
+    }
+    #aboutus .a-info-wrp {
+        flex-direction: column;}
+        #aboutus .a-info-wrp .info-right .a-img-one {
+            width: 90vw;}
+            #aboutus .a-info-wrp .info-right .a-img-two{
+                width: 40vw;
+            }
+            #aboutus .a-info-wrp .info-right {
+                
+                justify-content: center;}
+}
