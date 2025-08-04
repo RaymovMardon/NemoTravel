@@ -4,25 +4,31 @@ import TourCard from "../SectionTour/tourCard";
 import img8 from "./img/img8.jpg";
 import img9 from "./img/img9.jpg";
 import img10 from "./img/img10.jpg";
-const SectionHotel = () => {
+const SectionHotel = ({ t }) => {
   const hotel = [
     {
       img: img8,
-      ttitle: "Hyatt Regency Tashkent",
-      p: "Navoi ko'chasi 1-uy, Toshkent Zamonaviy mehmonxona markaz markazida",
-      btn: "Batafsil ma'lumot",
+      ttitle: t("Hyatt Regency Tashkent"),
+      p: t(
+        "Navoi ko'chasi 1-uy, Toshkent Zamonaviy mehmonxona markaz markazida"
+      ),
+      btn: t("Batafsilm"),
     },
     {
       img: img9,
-      ttitle: "Hilton Tashkent City",
-      p: "Islom Karimov ko'chasi 2-uy, Toshkent Biznes mehmonxona shahar markazida",
-      btn: "Batafsil ma'lumot",
+      ttitle: t("Hilton Tashkent City"),
+      p: t(
+        "Islom Karimov ko'chasi 2-uy, Toshkent Biznes mehmonxona shahar markazida"
+      ),
+      btn: t("Batafsilm"),
     },
     {
       img: img10,
-      ttitle: "City Palace Hotel",
-      p: "Amir Temur ko'chasi 15-uy, Toshkent Qulay mehmonxona diqqatga sazovor joylar yaqinida",
-      btn: "Batafsil ma'lumot",
+      ttitle: t("City Palace Hotel"),
+      p: t(
+        "Amir Temur ko'chasi 15-uy, Toshkent Qulay mehmonxona diqqatga sazovor joylar yaqinida"
+      ),
+      btn: t("Batafsilm"),
     },
   ];
   return (
@@ -30,7 +36,7 @@ const SectionHotel = () => {
       <section id="hotel">
         <div className="container">
           <div className="tour-title">
-            <h2>Mehmonxonalar</h2>
+            <h2 data-aos="fade-up">{t("Mehmonxonalar")}</h2>
           </div>
           <div className="tour-cards">
             {hotel.map((todo, index) => (

@@ -1,24 +1,24 @@
 import React from 'react'
 import TCard from './TCard'
 import './SectionTeam.css'
-const SectionTeam = () => {
+const SectionTeam = ({t}) => {
  const team=[{
-    t:"Direktor"
+    t:t("Direktor")
  },
  {
-    t:"Yurist"
+    t:t("Yurist")
  },
  {
-    t:"Operator"
+    t:t("Operator")
  },
  {
-    t:"Administrator"
+    t:t("Administrator")
  }]
     return (
     <>
     <section id='team'>
         <div className="container">
-            <h2>Bizning jamoa</h2>
+            <h2>{t("Bizning jamoa")}</h2>
             <div className="tcards">
                 {team.map((todo, index)=>(<TCard key={index} t={todo.t}/>))}
             </div>

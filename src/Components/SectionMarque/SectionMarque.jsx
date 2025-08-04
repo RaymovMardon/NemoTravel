@@ -6,13 +6,12 @@ import img16 from "./img/img16.jpg";
 import img17 from "./img/img17.jpg";
 import img18 from "./img/img18.jfif";
 import "./SectionMarque.css";
-const SectionMarque = () => {
+const SectionMarque = ({ t }) => {
   return (
     <>
-    <section id="marquee">
-      <h2>Hamkorlarimiz</h2>
-      <Marquee>
-        
+      <section id="marquee">
+        <h2>{t("Hamkorlarimiz")}</h2>
+        <Marquee>
           <div className="marquee-wrp">
             <div className="marq-div">
               <div className="mar-img">
@@ -55,8 +54,7 @@ const SectionMarque = () => {
               </div>
             </div>
           </div>
-        
-      </Marquee>
+        </Marquee>
       </section>
     </>
   );

@@ -4,7 +4,7 @@ import "./index.css";
 import "./reset.css";
 import "./aos.css";
 import App from "./App.jsx";
-
+import i18n from "../i18n.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />

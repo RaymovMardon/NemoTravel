@@ -1,89 +1,96 @@
-#hotel{
-    margin: 90px 0;
-    width: 100%;
+#hotel {
+  margin: 90px 0;
+  width: 100%;
 }
-#hotel .tour-title h2{
-    margin: 20px 0;
-text-align: center;
-font-size: 30px;
-font-weight: 700;
+#hotel .tour-title h2 {
+  padding: 40px 0;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
 }
-#hotel .tour-cards{
-    height: 370px;
-    /*grid-template-columns: auto auto auto auto;
+#hotel .tour-cards {
+  height: 370px;
+  /*grid-template-columns: auto auto auto auto;
     display: grid;*/
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
-#hotel .tour-cards .torcard img{
-    width: 100%;
-    height: 192px;
-    object-fit: cover;
+#hotel .tour-cards .torcard img {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
 }
 
-#hotel .tour-cards .torcard{
-    flex: 1;
-    box-shadow: 0 14px 20px 0px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
-    overflow: hidden;
-    border-radius: 12px;
+#hotel .tour-cards .torcard {
+  flex: 1;
+  min-height: 385px;
+  box-shadow: 0 14px 20px 0px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  overflow: hidden;
+  border-radius: 12px;
 }
-#hotel .tour-cards .torcard:hover{
-    height: 360px;}
-#hotel .tour-cards .torcard div{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: space-around;
-    height: 150px;
+#hotel .tour-cards .torcard:hover {
+  height: 360px;
+}
+#hotel .tour-cards .torcard div {
+  gap: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-around;
+  height: 150px;
 }
 
-#hotel .torcard div .btnn{
-    background-color: rgb(242 101 34 / var(--tw-bg-opacity, 1));
-    padding: 8px 20px;
-    color: #ffff;
-    border-style: none;
-    border-radius: 50px;
-    cursor: pointer;
+#hotel .torcard div .btnn {
+  background-color: rgb(242 101 34 / var(--tw-bg-opacity, 1));
+  padding: 8px 20px;
+  color: #ffff;
+  border-style: none;
+  border-radius: 50px;
+  cursor: pointer;
 }
-#hotel .torcard div .btnn:hover{
-    background-color: rgb(218, 94, 33);
-    transition: 0.3s;
+#hotel .torcard div .btnn:hover {
+  background-color: rgb(218, 94, 33);
+  transition: 0.3s;
 }
-#hotel .torcard div p{
+#hotel .torcard div p {
   line-height: 1.6rem;
 
-    color: #4B5563;
+  color: #4b5563;
 }
 
+@media only screen and (max-width: 1050px) {
+  #hotel .tour-cards {
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
 
-
-@media only screen and (max-width:1050px) {
-    #hotel .tour-cards {
-        height: auto;
-        display: grid;
-        grid-template-columns: auto auto;
-        
-        justify-content: center;}
-    #hotel .tour-cards .torcard {
-            max-width: 35vw;}
+    justify-content: center;
+  }
+  #hotel .tour-cards .torcard {
+    max-width: 35vw;
+  }
 }
-@media only screen and (max-width:840px) {
-    #hotel .tour-cards .torcard {
-        max-width: 37vw;}
+@media only screen and (max-width: 840px) {
+  #hotel .tour-cards .torcard {
+    max-width: 37vw;
+  }
 }
-@media only screen and (max-width:768px) {
-    #hotel .tour-cards .torcard {
-        max-width: 40vw;}
+@media only screen and (max-width: 768px) {
+  #hotel .tour-cards .torcard {
+    max-width: 40vw;
+  }
 }
 
-@media only screen and (max-width:700px) {
-    #hotel .tour-cards {
+@media only screen and (max-width: 700px) {
+  #hotel .tour-cards {
     grid-template-columns: 2fr;
-    }
-    #hotel .tour-cards .torcard {
-        max-width: 100%;}
+  }
+  #hotel .tour-cards .torcard {
+    max-width: 100%;
+  }
 }

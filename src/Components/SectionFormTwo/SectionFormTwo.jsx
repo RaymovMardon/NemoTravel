@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./SectionFormTwo.css";
-const SectionFormTwo = () => {
+const SectionFormTwo = ({ t }) => {
   const [name, SetName] = useState("");
   const [email, SetEmail] = useState("");
   const [phone, SetPhone] = useState("+998");
@@ -38,12 +38,12 @@ const SectionFormTwo = () => {
     <>
       <section id="form-two">
         <div className="container">
-          <h2 data-aos="fade-up">Biz bilan bog'lanish</h2>
+          <h2 data-aos="fade-up">{t("Biz bilan bog'lanish")}</h2>
           <p className="ftitl">
-            Savollaringiz bormi? Biz sizga yordam berishdan xursandmiz
+            {t("Savollaringiz bormi? Biz sizga yordam berishdan xursandmiz")}
           </p>
           <div className="form-two-wrp">
-            <div className="form-two-left">
+            <div data-aos="fade-left" className="form-two-left">
               <div className="form-input-two">
                 <div>
                   <label htmlFor="name">Your Name</label>
@@ -101,13 +101,13 @@ const SectionFormTwo = () => {
                 </div>
               </div>
             </div>
-            <div className="form-two-right">
+            <div data-aos="fade-right" className="form-two-right">
               <div>
-                <h3>Aloqa ma'lumotlari</h3>
-                <p>Manzil: Toshkent shahri, Muqimiy ko'chasi 44-A uy</p>
-                <p>Tel: +998 95 150 00 00</p>
+                <h3>{t("Aloqa ma'lumotlari")}</h3>
+                <p>{t("Manzil: Toshkent shahri, Muqimiy ko'chasi 44-A uy")}</p>
+                <p>{t("Tel: +998 95 150 00 00")}</p>
                 <p>Email: info@nemoavia.uz</p>
-                <p>Ish vaqti: Du-Sha 24 soat</p>
+                <p>{t("Ish vaqti: Du-Sha 24 soat")}</p>
               </div>
               <div>
                 <iframe

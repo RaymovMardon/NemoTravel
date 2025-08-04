@@ -1,64 +1,78 @@
 import React, { useState } from "react";
 import { TabView, TabPanel } from "primereact/tabview";
 import "./SectionFormOne.css";
-const SectionFormOne = () => {
+import { t } from "i18next";
+const SectionFormOne = ({ t }) => {
   const [info1, SetInfo1] = useState();
   const [info2, SetInfo2] = useState();
   const [info3, SetInfo3] = useState();
-  const [info4, SetInfo4] = useState();
+  const [info4, SetInfo4] = useState(1);
   const [info5, SetInfo5] = useState("null");
-  async function renderOne(){
-    let user= await fetch("https://api.telegram.org/bot7910001783:AAF_NjiPTZOeS2oniyVmLDvSMMS05IZuhOU/sendMessage",{method:"POST"
-  ,body: JSON.stringify({
-    text: `
+  if (info4 < 1) {
+    return SetInfo4(1);
+  }
+  async function renderOne() {
+    let user = await fetch(
+      "https://api.telegram.org/bot7910001783:AAF_NjiPTZOeS2oniyVmLDvSMMS05IZuhOU/sendMessage",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          text: `
     #AviachiptalarBorish
     Qayerdan:${info1}
     Qayerga:${info2}
     Jo'nash sanasi:${info3}
     Yo'lovchilar:${info4}
     Qaytish sanasi:${info5}`,
-  
-    chat_id:'-1002628074810',
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-  }).then(response=> response.json())
-     return user;
+
+          chat_id: "-1002628074810",
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    ).then((response) => response.json());
+    return user;
   }
-  async function mainB(user){
-    let k = await renderOne(user);}
-    async function renderTwo(){
-      let user= await fetch("https://api.telegram.org/bot7910001783:AAF_NjiPTZOeS2oniyVmLDvSMMS05IZuhOU/sendMessage",{method:"POST"
-    ,body: JSON.stringify({
-      text: `
+  async function mainB(user) {
+    let k = await renderOne(user);
+  }
+  async function renderTwo() {
+    let user = await fetch(
+      "https://api.telegram.org/bot7910001783:AAF_NjiPTZOeS2oniyVmLDvSMMS05IZuhOU/sendMessage",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          text: `
       #AviachiptalarQaytish
       Qayerdan:${info1}
       Qayerga:${info2}
       Jo'nash sanasi:${info3}
       Yo'lovchilar:${info4}
       Qaytish sanasi:${info5}`,
-    
-      chat_id:'-1002628074810',
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-    }).then(response=> response.json())
-       return user;
-    }
-    async function mainQ(user){
-      let k = await renderTwo(user);}   
+
+          chat_id: "-1002628074810",
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    ).then((response) => response.json());
+    return user;
+  }
+  async function mainQ(user) {
+    let k = await renderTwo(user);
+  }
   return (
     <>
       <section id="form-one">
         <div className="container">
-          <h1>Aviachiptalar</h1>
-          <TabView>
-            <TabPanel header="Borish">
+          <h3>{t("Aviachiptalar")}</h3>
+          <TabView data-aos="fade-up">
+            <TabPanel header={t("Borish")}>
               <div className="form-input">
                 <div>
-                  <label htmlFor="qayerdan">Qayerdan</label>
+                  <label htmlFor="qayerdan">{t("Qayerdan")}</label>
                   <br></br>
                   <input
                     id="qayerdan"
@@ -68,7 +82,7 @@ const SectionFormOne = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="qayerga">Qayerga</label>
+                  <label htmlFor="qayerga">{t("Qayerga")}</label>
                   <br />
                   <input
                     id="qayerga"
@@ -78,7 +92,7 @@ const SectionFormOne = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="idata">Jo'nash sanasi</label>
+                  <label htmlFor="idata">{t("Jo'nash sanasi")}</label>
                   <br />
                   <input
                     id="idata"
@@ -88,7 +102,7 @@ const SectionFormOne = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="yolovchi">Yo'lovchilar</label>
+                  <label htmlFor="yolovchi">{t("Yo'lovchilar")}</label>
                   <br />
                   <input
                     id="yolovchi"
@@ -98,12 +112,12 @@ const SectionFormOne = () => {
                   />
                 </div>
               </div>
-              <button onClick={mainB}>Qidirish</button>
+              <button onClick={mainB}>{t("Qidirish")}</button>
             </TabPanel>
-            <TabPanel header="Qaytish">
+            <TabPanel header={t("Qaytish")}>
               <div className="form-input">
                 <div>
-                  <label htmlFor="qayerdan">Qayerdan</label>
+                  <label htmlFor="qayerdan">{t("Qayerdan")}</label>
                   <br></br>
                   <input
                     id="qayerdan"
@@ -113,7 +127,7 @@ const SectionFormOne = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="qayerga">Qayerga</label>
+                  <label htmlFor="qayerga">{t("Qayerga")}</label>
                   <br />
                   <input
                     id="qayerga"
@@ -123,7 +137,7 @@ const SectionFormOne = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="idata">Jo'nash sanasi</label>
+                  <label htmlFor="idata">{t("Jo'nash sanasi")}</label>
                   <br />
                   <input
                     id="idata"
@@ -133,7 +147,7 @@ const SectionFormOne = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="">Qaytish sanasi</label>
+                  <label htmlFor="">{t("Qaytish sanasi")}</label>
                   <br />
                   <input
                     id="bdata"
@@ -143,7 +157,7 @@ const SectionFormOne = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="">Yo'lovchilar</label>
+                  <label htmlFor="">{t("Yo'lovchilar")}</label>
                   <br />
                   <input
                     id="yolovchi"
@@ -153,7 +167,7 @@ const SectionFormOne = () => {
                   />
                 </div>
               </div>
-              <button onClick={mainQ}>Qidirish</button>
+              <button onClick={mainQ}>{t("Qidirish")}</button>
             </TabPanel>
           </TabView>
         </div>

@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Длительность анимации в миллисекундах
-      once: true, // Анимация запускается один раз
+      once: false,
     });
   }, []);
   return (

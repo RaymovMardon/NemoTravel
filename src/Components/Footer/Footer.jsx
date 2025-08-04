@@ -1,7 +1,7 @@
 import React from "react";
 import logof from "../../assets/logo-f.png";
 import "./Footer.css";
-const Footer = () => {
+const Footer = ({ t }) => {
   return (
     <>
       <footer>
@@ -11,33 +11,33 @@ const Footer = () => {
               <a href="#">
                 <img src={logof} alt="logo-footer" />
               </a>
-              <p>Toshkent shahri, Muqimiy ko'chasi 44-A uy</p>
+              <p>{t("Toshkent shahri, Muqimiy ko'chasi 44-A uy")}</p>
             </div>
             <div>
-              <h3>Bog'lanish</h3>
+              <h3>{t("Bog'lanish")}</h3>
               <p>
-                Tel: +998 95 150 00 00
+                {t("Tel: +998 95 150 00 00")}
                 <br></br>
                 info@nemoavia.uz
               </p>
             </div>
             <div>
-              <h3>Ijtimoiy tarmoqlar</h3>
+              <h3>{t("Ijtimoiy tarmoqlar")}</h3>
               <div className="social-wrp">
                 <div className="social">
-                <i class="bi bi-telegram"></i>
+                  <i className="bi bi-telegram"></i>
                 </div>
                 <div className="social"></div>
               </div>
             </div>
             <div>
-              <h3>Manzil</h3>
-              <p>Toshkent shahri, Muqimiy ko'chasi 44-A uy</p>
+              <h3>{t("Manzil")}</h3>
+              <p>{t("Toshkent shahri, Muqimiy ko'chasi 44-A uy")}</p>
             </div>
           </div>
           <hr />
           <div className="footer-info">
-            <p>2025 Nemo Avia Trip. Barcha huquqlar himoyalangan.</p>
+            <p>{t("copy")}</p>
           </div>
         </div>
       </footer>

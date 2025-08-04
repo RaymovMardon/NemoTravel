@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import img from "../../assets/logo-h.png";
 import "./Header.css";
-const Header = () => {
+import { useTranslation } from "react-i18next";
+import i18n from "../../../i18n";
+
+const Header = ({ selectLng, i18Language }) => {
+  const { t, i18n } = useTranslation();
+
   const [togle, setTogl] = useState(0);
-  let t = "head-nav";
+  let o = "head-nav";
   if (togle % 2 == 0) {
-    t = "head-nav";
+    o = "head-nav";
   } else {
-    t = "head-view";
+    o = "head-view";
   }
   return (
     <>
@@ -17,37 +22,38 @@ const Header = () => {
             <a href="/">
               <img src={img} alt="" />
             </a>
-            <nav className={t}>
+            <nav className={o}>
               <ul>
                 <li>
-                  <a href="#intro">Asosiy</a>
+                  <a href="#intro">{t("Asosiy")}</a>
                 </li>
                 <li>
-                  <a href="#aboutus">Biz haqimizda</a>
+                  <a href="#aboutus">{t("Biz haqimizda")}</a>
                 </li>
                 <li>
-                  <a href="#tour">Turlar</a>
+                  <a href="#tour">{t("Turlar")}</a>
                 </li>
                 <li>
-                  <a href="#hotel">Mehmonxonalar</a>
+                  <a href="#hotel">{t("Mehmonxonalar")}</a>
                 </li>
                 <li>
-                  <a href="#form-one">Aviachiptalar</a>
+                  <a href="#form-one">{t("Aviachiptalar")}</a>
                 </li>
                 <li>
-                  <a href="#form-one">Aloqa</a>
+                  <a href="#form-one">{t("Aloqa")}</a>
                 </li>
               </ul>
             </nav>
-            <select>
-              <option selected value="uz">
-                O`zbek
-              </option>
-              <option value="ru">Русский</option>
-              <option value="en">English</option>
-            </select>
+            <div>
+              <i className="si-globe"></i>
+              <select defaultValue={i18Language} onChange={selectLng}>
+                <option value="uz">O`zbek</option>
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+              </select>
+            </div>
             <div className="bars" onClick={(e) => setTogl(togle + 1)}>
-              <i class="si-bars"></i>
+              <i className="si-bars"></i>
             </div>
           </div>
         </div>

@@ -1,80 +1,99 @@
-#form-one{
-    background-color: #F9FAFB;
-    width: 100%;
+#form-one {
+  background-color: #f9fafb;
+  width: 100%;
 }
-#form-one h1{
-    margin:0 30px ;
-    padding: 30px 0;
-}
-
-#form-one .form-input{
-    margin:20px 0 ;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    align-items: center;
-    gap:1.2rem;
-    justify-content: space-between;
+#form-one h3 {
+  margin: 0 30px;
+  padding: 45px 0;
+  font-size: 30px;
+  font-weight: 700;
 }
 
-#form-one .form-input div{
-    width: 100%;
+#form-one .form-input {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  align-items: center;
+  gap: 1.2rem;
+  justify-content: space-between;
 }
 
-#form-one .form-input input{
-    border-radius: 8px;
-    padding: 10px;
-    width: 100%;
+#form-one .form-input div {
+  width: 100%;
 }
 
-.p-tabview-selected{
-    border-radius: 8px;
-    color: #FFFF !important;
-    cursor: pointer;
-    background-color: #f26522 !important;
+#form-one .form-input input {
+  border-color: currentColor;
+
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
 }
-.p-unselectable-text{
-    color:#4b5563;
-    cursor: pointer;
-    border-radius: 8px;
-    padding: 8px 16px;
-    background-color: #F3F4F6;
+
+.p-tabview-selected {
+  border-radius: 8px;
+
+  cursor: pointer;
+  background-color: #f26522 !important;
 }
-.p-tabview-nav{
+.p-tabview-selected span {
+  color: #ffff !important;
+}
+.p-unselectable-text {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: #f3f4f6;
+}
+.p-unselectable-text span {
+  color: #4b5563;
+}
+.p-tabview-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#form-one button {
+  color: #ffff;
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+  border-color: #f26522;
+  padding: 13px 16px;
+  background-color: #f26522;
+  border-radius: 8px;
+}
+#form-one button:hover {
+  background-color: #e25e21;
+}
+#form-one .form-input label {
+  line-height: 1.75rem;
+  color: #4b5563;
+}
+.p-tabview {
+  background-color: #ffff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
+
+@media only screen and (max-width: 1024px) {
+  #form-one .form-input {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #form-one .form-input {
+    grid-template-columns: 2fr;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .p-tabview-nav {
     display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-#form-one  button{
-    color: #FFFF;
-    margin: 20px 0;
-    text-align: center;
-    width: 100%;
-    padding: 13px 16px;
-    background-color: #f26522;
-    border-radius: 8px;
-}
-#form-one .form-input label{
-    line-height: 1.75rem;
-    color:#4b5563;}
-.p-tabview{
-    background-color: #FFFF;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
-
-}
-
-
-@media only screen and (max-width:1024px) {
-    #form-one .form-input{
-    
-        grid-template-columns: 2fr 2fr;}
-}
-
-@media only screen and (max-width:768px) {
-    #form-one .form-input{
-    
-        grid-template-columns: 2fr;}
+    flex-direction: column;
+    align-items: baseline;
+  }
 }
