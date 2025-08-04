@@ -9,6 +9,10 @@
 a {
   text-decoration: none;
 }
+body,
+html {
+  overflow-x: hidden;
+}
 .container {
   margin: 0 auto;
   max-width: 1290px;
